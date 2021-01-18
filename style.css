@@ -1,0 +1,223 @@
+  @font-face {
+    font-family: 'no_continueregular';
+    src: url('gomarice_no_continue-webfont.woff2') format('woff2'),
+         url('gomarice_no_continue-webfont.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+
+body {
+  background:  	#262626;
+  margin: 0;
+  font-family: 'Rubik', sans-serif;
+}
+
+  .parallax-container {
+    position: fixed;
+    overflow: visible;
+    width: 100%;
+    height: 850px;
+  }
+
+  .parallax-background {
+      background-image: url("tausta2.png");
+      min-height: 500px;
+      background-attachment: fixed;
+      background-position: center;
+      background-repeat: no-repeat;
+      background-size: cover;
+  }
+
+  .parallax-layer {
+    width: 100%;
+    height: 550px;
+    position: fixed;
+    left: 0;
+    top: 0;
+    background-position: bottom center;
+    background-repeat: repeat-x;
+    background-size: 960px 360px;
+  }
+ 
+    .layer-1 {
+      top: -65px;
+      z-index: 5;
+      background-image: url('1.png');
+    }
+    
+    .layer-2 {
+      top: -70px;
+      z-index: 5;
+      background-image: url('2.png');
+    }
+
+    .layer-3 { /*volcano*/
+      top: -100px;
+      z-index: 5;
+      background-image: url('3.png');
+      background-repeat: no-repeat;
+    }
+
+    /* Smoke container */
+    
+    #smoke {
+      position: absolute;
+      z-index: -1px;
+      width: 1px; height: 160px;
+      left: 50%;
+      top: -70px;
+      filter: blur(5px);
+    }
+    
+    /* smoke balls */
+    
+    #smoke span { 
+      display: block;
+      position: absolute;
+      bottom: -35px; left: 50%; margin-left:-20px;
+      height: 0px; width: 0px;
+      border: 35px solid #4b4b4b;
+      border-radius: 35px;
+      left: -14px; opacity: 0;
+      transform: scale(0.2);
+    }
+    
+    /* Smoke animation */
+    
+    @keyframes smokeL {
+      0%   { transform: scale(0.2) translate(0, 0) }
+      10%  { opacity: 1; transform: scale(0.2) translate(0, -5px) }
+      100% { opacity: 0; transform: scale(1) translate(-20px, -130px) }
+    }
+    
+    @keyframes smokeR {
+      0%   { transform: scale(0.2) translate(0, 0) }
+      10%  { opacity: 1; transform: scale(0.2) translate(0, -5px) }
+      100% { opacity: 0; transform: scale(1) translate(20px, -130px) }
+    }
+    
+    #smoke .s0 { animation: smokeL 10s 0s infinite }
+    #smoke .s1 { animation: smokeR 10s 1s infinite }
+    #smoke .s2 { animation: smokeL 10s 2s infinite }
+    #smoke .s3 { animation: smokeR 10s 3s infinite }
+    #smoke .s4 { animation: smokeL 10s 4s infinite }
+    #smoke .s5 { animation: smokeR 10s 5s infinite }
+    #smoke .s6 { animation: smokeL 10s 6s infinite }
+    #smoke .s7 { animation: smokeR 10s 7s infinite }
+    #smoke .s8 { animation: smokeL 10s 8s infinite }
+    #smoke .s9 { animation: smokeR 10s 9s infinite }
+
+    .layer-4 {
+      top: -40px;
+      z-index: 20;
+      background-image: url('4.png');
+    }
+
+    .layer-5 {
+        top: 0px;
+        z-index: 25;
+        background-image: url('5.png');
+    }
+
+    .layer-6 {
+        top: 20px;
+        z-index: 30;
+        background-image: url('6.png');
+    }
+
+    .layer-7 {
+      top: 50px;
+      z-index: 40;
+      background-image: url('7.png');
+  }
+
+  .layer-8 {
+    top: 50px;
+    z-index: 40;
+    background-image: url('8.png');
+}    
+  .content {
+    position: absolute;
+    top: 400px;
+    background:  #020E0E;
+    width: 100%;
+    min-height: 1500px;
+  }
+    .content h1 {
+      color: #fff;
+      font-size: 1em;
+      text-transform: uppercase;
+      text-align: center;
+    }
+
+    .content h3 {
+      color: #fff;
+      font-size: 1em;
+      text-align: center;
+    }
+
+    .nimi {
+      display: block;
+      margin-left: auto;
+      margin-right: auto;
+      width: 350px;
+      height: 200px;
+    }
+
+    .button-container {
+      text-align: center;
+        }
+
+    .links:hover {
+      opacity: .5;
+    }
+
+    #links, links1 {
+      display: inline-block;
+    }
+
+    .links {
+    background-image: url("button.png");
+    height: 82px;
+    width: 250px;
+    border: 0;
+    font-family: 'no_continueregular';
+    font-size: 30px;
+    color: #fff;
+    margin-right: auto;
+    margin-left: auto;
+    opacity: 1;
+      -webkit-transition: .3s ease-in-out;
+      transition: .3s ease-in-out;
+    }
+
+    .links:hover {
+      opacity: .5;
+    }
+
+    .links1 {
+      background-image: url("button.png");
+      height: 82px;
+      width: 250px;
+      border: 0;
+      font-family: 'no_continueregular';
+      font-size: 30px;
+      color: #fff;
+      margin-right: auto;
+      margin-left: auto;
+      opacity: 1;
+      -webkit-transition: .3s ease-in-out;
+      transition: .3s ease-in-out;
+    }
+
+    .links1:hover {
+      opacity: .5;
+    }
+
+    .bottom {
+      position: fixed;
+      margin-left: auto;
+      margin-right: auto;
+      width: 100%;
+      bottom: 0;
+    }
